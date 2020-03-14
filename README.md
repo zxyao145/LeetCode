@@ -1,0 +1,1 @@
+[![Build Status](https://zgy147.visualstudio.com/LeetCode/_apis/build/status/LeetCode-CI?branchName=master)](https://zgy147.visualstudio.com/LeetCode/_build/latest?definitionId=1&branchName=master)
