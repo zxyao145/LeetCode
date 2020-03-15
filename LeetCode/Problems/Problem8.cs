@@ -28,7 +28,7 @@ namespace LeetCode.Problems
 
             foreach (var str in strArr)
             {
-                var returnVal = MyAtoi("-2147483647");
+                var returnVal = MyAtoi(str);
                 Console.WriteLine($"{str}:{returnVal}");
             }
         }
