@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LeetCode.Problems;
 
 namespace LeetCode
@@ -11,11 +7,10 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            Problem9.Main9();
+            Problem18.MainFunc();
 
-            Console.WriteLine("Finished");
+            Console.WriteLine("Finished!");
             Console.Read();
         }
-
     }
 }
