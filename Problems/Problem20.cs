@@ -10,7 +10,7 @@ using static LeetCode.Problems.Problem2;
 namespace LeetCode.Problems
 {
     /// <summary>
-    /// 最长公共前缀
+    /// 20. 有效的括号
     /// </summary>
     class Problem20
     {

@@ -10,7 +10,7 @@ using static LeetCode.Problems.Problem2;
 namespace LeetCode.Problems
 {
     /// <summary>
-    /// 最长公共前缀
+    /// 19. 删除链表的倒数第N个节点
     /// </summary>
     class Problem19
     {
