@@ -7,7 +7,7 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            Problem19.MainFunc();
+            Problem20.MainFunc();
 
             Console.WriteLine("Finished!");
             Console.Read();
