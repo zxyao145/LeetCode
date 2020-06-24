@@ -6,64 +6,78 @@ using System.Threading.Tasks;
 
 namespace LeetCode.Problems
 {
+    /// <summary>
+    /// 正则表达式匹配
+    /// 执行用时：76 ms, 在所有 C# 提交中击败了100.00%的用户
+    /// 内存消耗：24.4 MB, 在所有 C# 提交中击败了100.00%的用户
+    /// </summary>
     class Problem10
     {
-        //public static void Main9()
-        //{
-        //    var nums = new List<int>()
-        //    {
-        //        11,121,136,-45
-        //    };
-        //    foreach (var num in nums)
-        //    {
-        //        var result = IsMatch(num);
-        //        Console.WriteLine($"{num}:{result}");
-        //    }
-        //}
+        public static void Main10Test()
+        {
+            var str = "";
+            var p = ".*";
 
-        //public static bool IsMatch(string s, string p)
-        //{
-        //    if (string.IsNullOrWhiteSpace(p))
-        //    {
-        //        return string.IsNullOrWhiteSpace(s);
-        //    }
-        //    if (p == ".*")
-        //    {
-        //        return true;
-        //    }
+            Console.WriteLine(IsMatch(str, p));
 
-        //    if (string.IsNullOrWhiteSpace(s))
-        //    {
-        //        return false;
-        //    }
-        //    else
-        //    {
-        //        var sLen = s.Length;
-        //        var pCharIndex = p.Length - 1;
-        //        var curPChar = p[pCharIndex];
-        //        var result = false;
-        //        var flag = true;
-        //        for (int i = sLen - 1; i >= 0; i--)
-        //        {
-        //            var sChar = s[i];
-        //            if (curPChar != '*')
-        //            {
-        //                result = CharMatch(sChar, curPChar);
-        //                curPChar = p[--pCharIndex];
-        //            }
-        //            else
-        //            {
+        }
 
-        //            }
-        //        }
+        public static bool IsMatch(string s, string p)
+        {
+            if(string.IsNullOrWhiteSpace(s) && string.IsNullOrWhiteSpace(p))
+            {
+                return true;
+            }
+            else 
+            {
 
-        //    }
-        //}
+                var sLen = s.Length;
+                var pLen = p.Length;
 
-        //public static bool CharMatch(char txt, char p, bool must = true)
-        //{
-        //    if (p == '.') return true;
-        //    return txt == p;
-        //}
+                char[,] status = new char[sLen+1, pLen+1];
+                //两个字符串都为空
+                status[0, 0] = 't';
+                for (int i = 0; i <= sLen; ++i)
+                {
+                    for (int j = 1; j <= pLen; ++j)
+                    {
+                        if (p[j - 1] == '*')
+                        {
+                            status[i,j] = status[i,j - 2];
+                            if (Matches(s, p, i, j - 1))
+                            {
+                                status[i,j] 
+                                    = status[i, j] == 't'
+                                    ? status[i, j]
+                                    : status[i-1,j];
+                            }
+                        }
+                        else
+                        {
+                            if (Matches(s, p, i, j))
+                            {
+                                status[i,j] = status[i-1, j-1];
+                            }
+                        }
+                    }
+                }
+
+                return status[sLen, pLen] == 't';
+            }
+        }
+
+
+        public static bool Matches(string s, string p, int i, int j)
+        {
+            if (i == 0)
+            {
+                return false;
+            }
+            if (p[j - 1] == '.')
+            {
+                return true;
+            }
+            return s[i - 1] == p[j - 1];
+        }
     }
 }

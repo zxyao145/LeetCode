@@ -13,7 +13,7 @@ namespace LeetCode.Problems
     {
         #region 4.寻找两个有序数组的中位数
 
-        static void Main4Test()
+        public static void Main4Test()
         {
             var num1 = new List<int>();
             var num2 = new List<int>();
@@ -91,7 +91,6 @@ namespace LeetCode.Problems
         }
 
         #endregion
-
 
     }
 }
