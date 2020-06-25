@@ -31,7 +31,7 @@ public class Problem303 {
     }
 
     public int sumRange(int i, int j) {
-        if(i>1){
+        if(i>0){
             return _sums[j]-_sums[i-1];
         }else{
             return _sums[j];
