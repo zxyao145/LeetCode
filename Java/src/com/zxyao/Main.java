@@ -1,12 +1,12 @@
 package com.zxyao;
-import com.zxyao.problems.Problem392;
+import com.zxyao.problems.Problem303;
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Problem392.mainFunc();
+        Problem303.mainFunc();
 
         System.out.println("finished");
 	// write your code here
