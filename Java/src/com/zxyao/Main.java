@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Problem225.mainFunc();
+        Problem232.mainFunc();
 
         System.out.println("finished");
 	// write your code here
