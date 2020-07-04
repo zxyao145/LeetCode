@@ -1,5 +1,7 @@
 package com.zxyao.problems;
 
+import com.zxyao.TreeNode;
+
 import javax.transaction.TransactionRequiredException;
 
 public class Problem98 {
@@ -21,15 +23,5 @@ public class Problem98 {
 
 
         return isValidBST(root.right);
-    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
     }
 }
