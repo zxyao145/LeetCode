@@ -4,13 +4,12 @@ import sun.rmi.runtime.Log;
 
 public class Problem303 {
     public static void mainFunc() {
-        int[] nums = new int[] {-2, 0, 3, -5, 2, -1};
-
+        int[] nums = new int[] {-4,-5};
 
         Problem303 p = new Problem303(nums);
-        System.out.println(p.sumRange(0, 2));
-        System.out.println(p.sumRange(2, 5));
-        System.out.println(p.sumRange(0, 5));
+        System.out.println(p.sumRange(0, 0));
+        System.out.println(p.sumRange(1,1));
+        System.out.println(p.sumRange(0,1));
     }
 
 
